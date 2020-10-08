@@ -24,7 +24,7 @@ public class VerifyFilterStudentAccessRequestWithINACTIVE {
 		if (browser.equalsIgnoreCase("firefox")) {
 
 			System.out.println(" Executing on FireFox");
-			System.setProperty("webdriver.gecko.driver","D:\\driver\\geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "\\driver\\geckodriver.exe");
 			driver = new FirefoxDriver();
 			// Puts an Implicit wait, Will wait for 10 seconds before throwing
 			// exception
@@ -35,7 +35,7 @@ public class VerifyFilterStudentAccessRequestWithINACTIVE {
 			driver.manage().window().maximize();
 		} else if (browser.equalsIgnoreCase("chrome")) {
 			System.out.println(" Executing on CHROME");
-			System.setProperty("webdriver.chrome.driver","D:\\driver\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\driver\\chromedriver.exe");
 			driver = new ChromeDriver();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
